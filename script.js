@@ -1,38 +1,56 @@
-const students = [
+let av1 = []
+let av2 = []
+let av3 = []
+
+const studants = [
     {
         name: "Pedro",
-        av1: 8.5,
-        av2: 9,
-    },
-    {
-        name: "João",
         av1: 10,
-        av2: 10,
-    },
-    {
-        name: "Maria",
-        av1: 9,
-        av2: 9,
+        av2: 8,
+        av3: 10
     },
     {
         name: "Marcos",
-        av1: 6,
+        av1: 8,
+        av2: 7,
+        av3: 7
+    },
+    {
+        name: "Maria",
+        av1: 10,
+        av2: 10,
+        av3: 10
+    },
+    {
+        name: "João",
+        av1: 5,
         av2: 5,
-    }
+        av3: 6
+    },
+    {
+        name: "Clara",
+        av1: 7,
+        av2: 8,
+        av3: 8
+    },
 ]
 
-function average (av1, av2) {
-    return ((av1 + av2) / 2)
+function average (av1, av2, av3) {
+    return ((studants.av1 + studants.av2 + studants.av3) / 3 ).toFixed(2)
 }
 
-function printStudent(student) {
-    return (`
-        O aluno ${student.name} possuia a média de ${average(student.av1, student.av2)} \n
-        Parabéns ${student.name}, você foi aprovado!!!
+function printStudants(student) {
+    return
+}
+
+if (average >= 7) {
+    alert(`
+        A média do(a) aluno(a) ${studant.name} é: ${average}\n
+        Parabén, ${studant.name}! Você foi aprovado(a) no curso
         `)
-}
-
-for (let student of students) {
-    let averageMessage = printStudent
-    alert(averageMessage)
+} else {
+    alert(`
+        A média do(a) aluno(a) ${student.name} é: ${average}\n
+        Não foi dessa vez, ${student.name}! Tentar novamente!
+        `)
 }
